@@ -1,0 +1,12 @@
+.title{
+    text-align: center;
+    font-weight: bold;
+}
+.boxone{
+    margin-top: 6em;
+    justify-content: center;
+    display: flex;
+}
+::placeholder{
+    font-size: 15px;
+}
