@@ -19,7 +19,7 @@ import { useState } from 'react'
     try {
       console.log('start');
       const message = inputvalue
-      const res = await axios.post("./api/azopenai ", { message });
+      const res = await axios.post("./api/azopenai", { message });
       console.log('途中')
       setContent(res.data[0].message.content);
       console.log("終わり")

@@ -1,7 +1,7 @@
 import { getAzOpenAIData } from '../../models/azopenaiApplicationService'
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function handler(
+export default async function Azopenai(
     req: NextApiRequest,
     res: NextApiResponse
   ) {
