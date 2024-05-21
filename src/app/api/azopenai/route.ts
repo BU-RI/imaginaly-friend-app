@@ -1,4 +1,4 @@
-import { getAzOpenAIData } from '../models/azopenaiApplicationService';
+import { getAzOpenAIData } from '../../models/azopenaiApplicationService'
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(
@@ -7,8 +7,8 @@ export default async function handler(
   ) {
     try {
         console.log("catched")
-        const inputvalue = req.body.inputvalue;
-        const data = await getAzOpenAIData(inputvalue);
+        const message = req.body.message;
+        const data = await getAzOpenAIData(message);
         res.json(data);
     } catch (error) {
       console.log('🚀 ~ file: hello.ts:13 ~ error:', error);

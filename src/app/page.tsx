@@ -8,6 +8,7 @@ import { useState } from 'react'
 
 
 
+
  function Home() {
   const [ isLoading, setIsLoading ] = useState<boolean>(false);
   const [ inputvalue, setInputvalue ] = useState<string>("")
@@ -17,8 +18,11 @@ import { useState } from 'react'
     setIsLoading(true);
     try {
       console.log('start');
-      const res = await axios.post('api/azopenai/', { inputvalue });
-      setContent(res.data[0].inputvalue.content);
+      const message = inputvalue
+      const res = await axios.post("./api/azopenai ", { message });
+      console.log('途中')
+      setContent(res.data[0].message.content);
+      console.log("終わり")
     } catch (err) {
       console.log('🚀 ~ file: index.tsx:32 ~ getAzData ~ err:', err);
     }
